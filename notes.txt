@@ -1,0 +1,26 @@
+P: The total number of PCR tests performed as of yesterday in the United States.
+S: 
+there are 56 unique state/state_fips/state_name
+for each state fip, there are only three unique overall_outcome
+    Positive, Negative, Inconclusive 
+we need to calculate the latest value of total_results_reported for each state fip
+
+
+
+P: The 7-day rolling average number of new cases per day for the last 30 days.
+S:
+The "change in daily cases in last 7 days" column uses the seven-day average of new cases on the most recent full day of data to calculate 
+the percent change compared to the average a week before.
+New cases per day.
+7-day average of new cases per day (7-day average = new cases per day for the last 7 days)
+7-day rolling average number of new cases per day for the last 30 days
+    it takes the last 7 days, adds them up, and divides it by 7 for the last 30 days of data
+https://www.georgiaruralhealth.org/blog/what-is-a-moving-average-and-why-is-it-useful/
+
+
+create a new dataframe and apply rolling panda on it
+intent: is to show that person has seen data as raw and transformed it appropriately to make it easy to work with
+
+
+P: The 10 states with the highest test positivity rate (positive tests / tests performed) for tests performed in the last 30 days.
+no of Positive testcase in last 30 days for each state/ last 30 days of new_results_reported
